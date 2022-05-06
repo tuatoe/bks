@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import './app.scss';
 import scottAllison from './images/our-team-dr-scott-allison.jpg'
 import emmanuelMiantona from './images/our-team-emmanuel-miantona.jpg'
@@ -5,7 +6,23 @@ import pahKSuku from './images/our-team-pah-k-suku.jpg'
 import tobyEiler from './images/our-team-toby-eiler.jpg'
 import zeamboDahnweih from './images/our-team-zeambo-dahnweih.jpg'
 
+import NavMobile from '../src/components/mobile-nav/MobileNav'
+import NavDesktop from '../src/components/desktop-nav/DesktopNav'
+
 function App() {
+
+  const [windowWidth, setWindowWidth] = useState()
+  const targetWidth = 767;
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setWindowWidth(window.innerWidth)
+    }, [windowWidth])
+
+    window.addEventListener('load', () => {
+      setWindowWidth(window.innerWidth)
+    })
+  }, [windowWidth])
 
   const team = [
     { name: 'Emmanuel Miantona', img: emmanuelMiantona },
@@ -20,18 +37,10 @@ function App() {
         <header class="heading">
           <span>Benjamin Karmon Sehkar Foundation</span>
         </header>
-        <nav>
-          <ul>
-            <li>About us</li>
-            <li>What we do</li>
-            <li>How you can help</li>
-            <li>Our team</li>
-            <li>Eevents</li>
-            <li>Gallery</li>
-            <li>Contact</li>
-            <li>Donate</li>
-          </ul>
-        </nav>
+
+        {windowWidth <= targetWidth && (<NavMobile />)}
+        {!windowWidth <= targetWidth && (<NavDesktop />)}
+
       </div>
       <section class="section section1">
         <h2>About Us</h2>
@@ -52,21 +61,19 @@ function App() {
       </section>
 
       <div class="img2">
-        <div class="heading">
-          <h2>What we do</h2>
-          <p>
-            The BKS&trade; Foundation, Inc. provides scholarships to underprivileged and disadvantaged students to attend all major universities and colleges in Liberia. BKS&trade; Foundation is also partnering with some major high schools in the rural parts of the country to provide tuition assistance to students who meet its scholarship requirements. In addition to the aforementioned, we provide school supplies (notebooks, pencil, backpacks, crayons, rulers, etc.) to the disadvantaged students in Liberia.
+        <h2>What we do</h2>
+        <p>
+          The BKS&trade; Foundation, Inc. provides scholarships to underprivileged and disadvantaged students to attend all major universities and colleges in Liberia. BKS&trade; Foundation is also partnering with some major high schools in the rural parts of the country to provide tuition assistance to students who meet its scholarship requirements. In addition to the aforementioned, we provide school supplies (notebooks, pencil, backpacks, crayons, rulers, etc.) to the disadvantaged students in Liberia.
                     </p>
 
-          <p>
-            <strong>BKS&trade; Legacy Scholarships</strong> are awarded to students from the Buu-Yao District who are currently enrolled at the following institutions: the Nimba County Community College, University of Liberia, Liberia International Christian College, Starz College of Science and Technology, and the United Methodist University. Qualified students from the Buu-Yao District who are intending to enroll at these universities will be awarded The BKS&trade; Legacy Scholarship. The Scholarship recipients are expected to complete annual service projects with young children and demonstrate leadership potential through involvement in school or community activities. Buu-Yao students at all levels of academic achievements may qualify for this grant. The selection process highlights an applicant's attitude toward education, willingness to provide service to children, and financial need.
+        <p>
+          <strong>BKS&trade; Legacy Scholarships</strong> are awarded to students from the Buu-Yao District who are currently enrolled at the following institutions: the Nimba County Community College, University of Liberia, Liberia International Christian College, Starz College of Science and Technology, and the United Methodist University. Qualified students from the Buu-Yao District who are intending to enroll at these universities will be awarded The BKS&trade; Legacy Scholarship. The Scholarship recipients are expected to complete annual service projects with young children and demonstrate leadership potential through involvement in school or community activities. Buu-Yao students at all levels of academic achievements may qualify for this grant. The selection process highlights an applicant's attitude toward education, willingness to provide service to children, and financial need.
                     </p>
 
-          <h2>Our Long-term Goal</h2>
-          <p>
-            We are committed to providing educational opportunities to the children of Liberia, regardless of the constraints, while teaching them the word of God. Our goal is to ensure that the children of the rural parts of Liberia receive quality education in safe, constructive, and well-staffed educational facilities. We will ensure that these future leaders are not individually, regionally or collectively left out of this fundamental human right, whether as a result of gender inequality, geographical location, policy, financial policy, human resources, or any other limitations.
+        <h2>Our Long-term Goal</h2>
+        <p>
+          We are committed to providing educational opportunities to the children of Liberia, regardless of the constraints, while teaching them the word of God. Our goal is to ensure that the children of the rural parts of Liberia receive quality education in safe, constructive, and well-staffed educational facilities. We will ensure that these future leaders are not individually, regionally or collectively left out of this fundamental human right, whether as a result of gender inequality, geographical location, policy, financial policy, human resources, or any other limitations.
                     </p>
-        </div>
       </div>
       <section class="section section2">
         <h2>How you can help</h2>
@@ -78,14 +85,12 @@ function App() {
       </section>
 
       <div class="img3 our-team">
-        <div class="heading">
-          <span>Our team</span>
-          <ul>
-            {team.map((item, index) =>
-              <li key={`${index + 1}`}><img src={item.img} alt={item.name} /> <p>{item.name}</p></li>
-            )}
-          </ul>
-        </div>
+        <h2>Our team</h2>
+        <ul>
+          {team.map((item, index) =>
+            <li key={`${index + 1}`}><img src={item.img} alt={item.name} /> <p>{item.name}</p></li>
+          )}
+        </ul>
       </div>
       <section class="section section3">
         <h2>Section Three</h2>
@@ -101,6 +106,7 @@ function App() {
         <div class="heading">
           <span>Parallax Website</span>
         </div>
+
       </div>
     </main>
   );
