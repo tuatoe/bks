@@ -101,7 +101,6 @@ function App() {
           illo ullam itaque non.
     </p>
       </section>
-
       <div class="img1">
         <div class="heading">
           <span>Parallax Website</span>
