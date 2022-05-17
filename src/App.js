@@ -8,6 +8,7 @@ import zeamboDahnweih from './images/our-team-zeambo-dahnweih.jpg'
 
 import NavMobile from '../src/components/mobile-nav/MobileNav'
 import NavDesktop from '../src/components/desktop-nav/DesktopNav'
+import logo from './images/bks_logo.png'
 
 function App() {
 
@@ -33,16 +34,36 @@ function App() {
   ]
   return (
     <main>
-      <div class="img1">
-        <header class="heading">
-          <span>Benjamin Karmon Sehkar Foundation</span>
+      <div className="img1">
+        <header className="heading">
+          <div>
+            <img src={logo} alt='Benjamin Karmon Sehkar Foundation' tabIndex='1' />
+            <nav>
+              <ul>
+                <li><a className="link" href="">About us</a></li>
+                <li><a className="link" href="">What we do</a></li>
+                <li><a className="link" href="">How you can help</a></li>
+                <li><a className="link" href="">Eevents</a></li>
+                <li><a className="link" href="">Gallery</a></li>
+                <li><a className="link" href="">Contact</a></li>
+                <li><a className="link" href="">Donate</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h2>Equal Access to Quality Eduation</h2>
+            <h2>Empowerment Through Education</h2>
+          </div>
+          {/* <span>
+            {windowWidth <= targetWidth && (<NavMobile />)}
+            {!windowWidth <= targetWidth && (<NavDesktop />)}
+          </span> */}
+
         </header>
 
-        {windowWidth <= targetWidth && (<NavMobile />)}
-        {!windowWidth <= targetWidth && (<NavDesktop />)}
 
       </div>
-      <section class="section section1">
+      <section className="section section1">
         <h2>About Us</h2>
         <p>
           A group of Liberians residing in the US have established the Benjamin Karmon Sehkar Foundation Incorporated (BKS&trade;). The BKS&trade; Foundation, as it is affectionately known, has been established in memory of the late Benjamin K. Sehkar. Sehkar was a broadcast journalist killed in 1990 at the height of the Liberian Civil War by Armed Forces of Liberia (AFL) soldiers during a popular uprising against the Samuel Kanyon Doe government. The Foundation was established with a focus on providing tuition assistance to disadvantaged and underprivileged children from rural Liberia, with Nimba County as the primary target for aid. BKS&trade; is headquartered in Monrovia, Liberia.
@@ -60,7 +81,7 @@ function App() {
 
       </section>
 
-      <div class="img2">
+      <div className="img2">
         <h2>What we do</h2>
         <p>
           The BKS&trade; Foundation, Inc. provides scholarships to underprivileged and disadvantaged students to attend all major universities and colleges in Liberia. BKS&trade; Foundation is also partnering with some major high schools in the rural parts of the country to provide tuition assistance to students who meet its scholarship requirements. In addition to the aforementioned, we provide school supplies (notebooks, pencil, backpacks, crayons, rulers, etc.) to the disadvantaged students in Liberia.
@@ -75,7 +96,7 @@ function App() {
           We are committed to providing educational opportunities to the children of Liberia, regardless of the constraints, while teaching them the word of God. Our goal is to ensure that the children of the rural parts of Liberia receive quality education in safe, constructive, and well-staffed educational facilities. We will ensure that these future leaders are not individually, regionally or collectively left out of this fundamental human right, whether as a result of gender inequality, geographical location, policy, financial policy, human resources, or any other limitations.
                     </p>
       </div>
-      <section class="section section2">
+      <section className="section section2">
         <h2>How you can help</h2>
         <h3>You Can Make A Difference</h3>
         <p>There are many ways you could get involved. Below are some ways you could help make a difference in the lives of the underprivileged and disadvantaged children in Liberia: Follow our progress on our website, Facebook, Instagram and Twitter. Help us spread the word.</p>
@@ -84,7 +105,7 @@ function App() {
         <p>Talk to your School / College / Church / University / Company to select BKS&trade; Foundation, Inc. as their charity of choice for donations. To promote our partnership, we will provide you with our organization's logo and merchandise.</p>
       </section>
 
-      <div class="img3 our-team">
+      <div className="img3 our-team">
         <h2>Our team</h2>
         <ul>
           {team.map((item, index) =>
@@ -92,7 +113,7 @@ function App() {
           )}
         </ul>
       </div>
-      <section class="section section3">
+      <section className="section section3">
         <h2>Section Three</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla explicabo totam voluptates, quis in ex provident unde
@@ -101,8 +122,8 @@ function App() {
           illo ullam itaque non.
     </p>
       </section>
-      <div class="img1">
-        <div class="heading">
+      <div className="img1">
+        <div className="heading">
           <span>Parallax Website</span>
         </div>
 
