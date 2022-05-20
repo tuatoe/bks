@@ -6,8 +6,8 @@ import pahKSuku from './images/our-team-pah-k-suku.jpg'
 import tobyEiler from './images/our-team-toby-eiler.jpg'
 import zeamboDahnweih from './images/our-team-zeambo-dahnweih.jpg'
 
-// import NavMobile from '../src/components/mobile-nav/MobileNav'
-// import NavDesktop from '../src/components/desktop-nav/DesktopNav'
+import NavMobile from '../src/components/mobile-nav/MobileNav'
+import NavDesktop from '../src/components/desktop-nav/DesktopNav'
 import logo from './images/bks_logo.png'
 
 function App() {
