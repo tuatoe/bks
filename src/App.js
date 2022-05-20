@@ -67,7 +67,7 @@ function App() {
           <h2>About Us</h2>
           <p>
             A group of Liberians residing in the US have established the Benjamin Karmon Sehkar Foundation Incorporated (BKS&trade;). The BKS&trade; Foundation, as it is affectionately known, has been established in memory of the late Benjamin K. Sehkar. Sehkar was a broadcast journalist killed in 1990 at the height of the Liberian Civil War by Armed Forces of Liberia (AFL) soldiers during a popular uprising against the Samuel Kanyon Doe government. The Foundation was established with a focus on providing tuition assistance to disadvantaged and underprivileged children from rural Liberia, with Nimba County as the primary target for aid. BKS&trade; is headquartered in Monrovia, Liberia.
-                     </p>
+          </p>
 
           <h4>Our Mission</h4>
           <p>
