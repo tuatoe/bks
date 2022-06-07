@@ -1,0 +1,185 @@
+.menubar {
+    position: relative;
+  
+    &__home-logo {
+      font-size: 1rem;
+      color: #fff;
+      padding-right: 4rem;
+      .mast-head--svg {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+  
+    &__usbank-logo {
+      padding: 1rem;
+    }
+  
+    .flex__item:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  .menubar span {
+    display: inline-block;
+    position: absolute;
+    right: 50%;
+    transform: translateX(-50%);
+    font-weight: 300;
+    font-size: 0.5rem;
+    line-height: 60;
+  }
+  
+  #hambmenu {
+    position: relative;
+    width: 4rem;
+    height: 5.5rem;
+    float: right;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  
+    span {
+      position: absolute;
+      height: 0.5rem;
+      width: 100%;
+      vertical-align: middle;
+      margin: 1.5rem 0 0 1.5rem;
+      background: white;
+      border-radius: 0.8rem;
+      opacity: 1;
+      right: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+      padding: 0;
+    }
+  }
+  
+  #hambmenu span:nth-child(1) {
+    top: 0;
+  }
+  
+  #hambmenu span:nth-child(2),
+  #hambmenu span:nth-child(3) {
+    top: 10px;
+  }
+  
+  #hambmenu span:nth-child(2),
+  #hambmenu span:nth-child(3) {
+    top: 10px;
+  }
+  
+  #hambmenu span:nth-child(4) {
+    top: 20px;
+  }
+  
+  #hambmenu.isopen span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    right: 50%;
+    opacity: 0;
+  }
+  
+  #hambmenu.isopen span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  #hambmenu.isopen span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  #hambmenu.isopen span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    right: 50%;
+    opacity: 0;
+  }
+  
+  #menu {
+    position: absolute;
+    height: calc(100vh);
+    width: 28.5rem;
+    transform: translateX(-300%);
+    transition: transform 600ms ease-in-out;
+    background-color: #fff;
+    padding: 1em;
+    z-index: 999;
+    box-shadow: 0.1px 0 1px #eaeaea;
+  
+    & .section-title {
+      font-size: 2.5rem;
+      padding: 0;
+      margin: 1rem 0;
+      text-align: left;
+    }
+  }
+  
+  #menu.isopen {
+    transform: none;
+  }
+  
+  #menu ul {
+    margin-top: 0;
+    padding: 0;
+    color: black;
+    list-style-type: none;
+    text-align: left;
+  }
+  
+  #menu li {
+    padding: 0.5rem 0;
+    font-size: 1.8rem;
+  }
+  
+  #menu li:last-child {
+    border-bottom: none;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+  
+    &__item {
+      margin: auto 0;
+      margin-right: 1rem;
+  
+      &:last-child {
+        margin-right: 0;
+      }
+  
+      &__child {
+        width: 13rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+  
+  .flex--start {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .flex--end {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .flex-2 {
+    flex: 2;
+  }
+  .flex-3 {
+    flex: 3;
+  }
+  .flex-4 {
+    flex: 4;
+  }
+  .flex-5 {
+    flex: 5;
+  }
+  .flex-6 {
+    flex: 6;
+  }
+  

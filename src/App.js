@@ -8,7 +8,7 @@ import zeamboDahnweih from './images/our-team-zeambo-dahnweih.jpg'
 
 import NavMobile from '../src/components/mobile-nav/MobileNav'
 import NavDesktop from '../src/components/desktop-nav/DesktopNav'
-import logo from './images/bks_logo.png'
+import Header from './header';
 
 function App() {
 
@@ -35,32 +35,7 @@ function App() {
   return (
     <main>
       <div className="img1">
-        <header className="heading container">
-          <div className="nav">
-            <img className="logo" src={logo} alt='Benjamin Karmon Sehkar Foundation' tabIndex='1' />
-            <nav>
-              <ul>
-                <li><a className="link" href="">About us</a></li>
-                <li><a className="link" href="">What we do</a></li>
-                <li><a className="link" href="">How you can help</a></li>
-                <li><a className="link" href="">Eevents</a></li>
-                <li><a className="link" href="">Gallery</a></li>
-                <li><a className="link" href="">Contact</a></li>
-                <li><a className="link" href="">Donate</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div className='hero'>
-            <h2 className='hero__title-one'>Equal Access to Quality Eduation</h2>
-            <h3 className='hero__title-two'>Empowerment Through Education</h3>
-            <a className='link' href="#">DONATE</a>
-          </div>
-          {/* <span>
-            {windowWidth <= targetWidth && (<NavMobile />)}
-            {!windowWidth <= targetWidth && (<NavDesktop />)}
-          </span> */}
-
-        </header>
+        <Header />
       </div>
       <section className="section section1">
         <div className='container'>
