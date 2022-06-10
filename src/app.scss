@@ -1,8 +1,8 @@
 @import './var.scss';
-@import '../src/components/desktop-nav/desktop-nav.scss';
-@import '../src/components/mobile-nav/mobile-nav.scss';
+@import '../src/components/nav-mobile/styles.scss';
+@import '../src/components/nav-desktop/styles.scss';
 @import '../src/components/hamburger/hamburger.scss';
-@import '../src/components/nav/styles.scss';
+@import './header/styles.scss';
 
 * {
   box-sizing: border-box;
@@ -22,7 +22,7 @@ body, html {
 
 
 .container{
-  width: 1344px;
+  max-width: 1344px;
   margin: 0 auto;
 }
 
@@ -80,53 +80,8 @@ body, html {
       font-weight: 300;
     }
   }
-  .nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    nav{
-      ul{
-        list-style: none;
-        display: flex;
-        gap: 20px;
-        a{
-          color:#fff;
-          font-size: 1rem;
-          text-transform: uppercase;
-          font-weight: bold;
-          text-decoration: none;
-          &:hover{
-            text-decoration: underline;
-            color:#ccc;
-          }
-        }
-      }
-    }
-  }
 }
 
-// .heading div{
-//   display: flex;
-//   justify-content: space-around;
-// }
-// .heading nav ul{
-//   display: flex;
-//   gap: 1rem;
-//   width:750px;
-//   list-style: none;
-//   align-items: baseline;
-//   align-self: baseline;
-// }
-// .heading nav ul li a{
-//   text-decoration: none;
-//   color: #fff;
-//   font-size: 1rem;
-//   font-weight: bold;
-//   text-transform: uppercase;
-// }
-// .heading nav ul li a:hover{
-//   color:#ddd;
-// }
 .section {
   text-align: center;
   padding: 50px 80px;

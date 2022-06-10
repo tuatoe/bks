@@ -1,3 +1,24 @@
+@media(max-width: 767px){
+  .nav-mobile{
+      display: block;
+      nav{
+        ul{
+          display: block;
+          text-decoration: none;
+          padding-left:2rem;
+        }
+        a{
+          color:#444;
+          font-size: 1.2rem;
+        }
+      }
+  }
+  .nav-desktop{
+      display: none;
+  }
+}
+
+
 .menubar {
     position: relative;
   
@@ -95,12 +116,19 @@
     right: 50%;
     opacity: 0;
   }
+
+  button#hambmenu{
+      background-color: transparent;
+      border:0;
+  }
   
   #menu {
     position: absolute;
     height: calc(100vh);
-    width: 28.5rem;
-    transform: translateX(-300%);
+    width: 100%;
+    left:-100px;
+    top:-50px;
+    transform: translateX(-200%);
     transition: transform 600ms ease-in-out;
     background-color: #fff;
     padding: 1em;
